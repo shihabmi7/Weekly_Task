@@ -10,45 +10,53 @@
     tools:context="com.bitmakers.weeklytask.HomeActivity">
 
     <EditText
+        android:id="@+id/editText_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText_name"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:hint="name" />
+        android:hint="user id" />
 
     <EditText
-        android:layout_below="@+id/editText_name"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:id="@+id/editText_email"
-
-        android:layout_centerHorizontal="true"
-        android:hint="email" />
-    <EditText
         android:layout_width="match_parent"
-        android:layout_below="@+id/editText_email"
         android:layout_height="wrap_content"
-        android:id="@+id/editText_pass"
-
+        android:layout_below="@+id/editText_name"
         android:layout_centerHorizontal="true"
         android:hint="password" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Registration"
-        android:id="@+id/button"
-        android:layout_below="@+id/editText_pass"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="62dp" />
 
-    <Button
+    <CheckBox
+        android:id="@+id/checkBox"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Social Log In"
-        android:id="@+id/button2"
-        android:layout_below="@+id/button"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp" />
+        android:layout_below="@+id/editText_email"
+        android:text="keep me log in"
+
+        />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/checkBox"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/button_registration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Registration" />
+
+        <Button
+            android:id="@+id/button_log_in"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Log In" />
+
+    </LinearLayout>
+
+
 </RelativeLayout>
