@@ -9,52 +9,68 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.bitmakers.weeklytask.HomeActivity">
 
-    <EditText
-        android:id="@+id/editText_project_name"
+    <Spinner
+        android:id="@+id/spinner_select_goal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:hint="user id" />
+        android:layout_below="@+id/editText_project_name">
 
-    <EditText
-        android:id="@+id/editText_email"
+    </Spinner>
+
+    <Spinner
+        android:id="@+id/spinner_assigned_to"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText_project_name"
-        android:layout_centerHorizontal="true"
-        android:hint="password" />
+        android:layout_below="@+id/spinner_select_goal">
 
+    </Spinner>
 
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="wrap_content"
+    <Spinner
+        android:id="@+id/spinner_priority"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText_email"
-        android:text="keep me log in"
+        android:layout_below="@+id/spinner_assigned_to">
 
-        />
+    </Spinner>
+
+
+    <EditText
+        android:id="@+id/editText_create_task"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spinner_priority"
+        android:hint="Create Goal
+        " />
+
+    <EditText
+        android:id="@+id/editText_hour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText_create_task"
+        android:hint="Create Hour
+        " />
 
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/checkBox"
+        android:layout_below="@+id/editText_hour"
         android:weightSum="2">
 
         <Button
-            android:id="@+id/button_registration"
+            android:id="@+id/button_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Registration" />
+            android:text="Cancel" />
 
         <Button
-            android:id="@+id/button_log_in"
+            android:id="@+id/button_create_goal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Log In" />
+            android:text="Create" />
 
     </LinearLayout>
 

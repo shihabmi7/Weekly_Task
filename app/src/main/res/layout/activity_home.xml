@@ -12,13 +12,13 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText_name"
+        android:id="@+id/editText_project_name"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:hint="name" />
 
     <EditText
-        android:layout_below="@+id/editText_name"
+        android:layout_below="@+id/editText_project_name"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/editText_email"
