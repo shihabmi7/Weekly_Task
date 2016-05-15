@@ -23,16 +23,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/spinner_select_goal"
-        android:hint="Create Task
-        " />
+        android:hint="Create Task" />
 
     <EditText
         android:id="@+id/editText_hour"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editText_create_task"
-        android:hint="Create Hour
-        " />
+        android:hint="Create Hour" />
 
 
     <SeekBar
@@ -43,7 +41,7 @@
         android:padding="20dp" />
 
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/linear_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/seekBar"
