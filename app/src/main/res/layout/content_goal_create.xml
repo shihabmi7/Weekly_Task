@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,13 +8,19 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".LoginActivity">
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.bitmakers.weeklytask.GoalCreateActivity"
+    tools:showIn="@layout/activity_goal_create">
+
+
 
     <Spinner
         android:id="@+id/spinner_select_goal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText_project_name">
+        android:layout_below="@+id/editText_project_name"
+        android:entries="@array/arrays_goal"
+        android:layout_marginTop="5dp">
 
     </Spinner>
 
@@ -21,7 +28,9 @@
         android:id="@+id/spinner_assigned_to"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/spinner_select_goal">
+        android:layout_below="@+id/spinner_select_goal"
+        android:entries="@array/arrays_assignee"
+        android:layout_marginTop="5dp">
 
     </Spinner>
 
@@ -29,50 +38,73 @@
         android:id="@+id/spinner_priority"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/spinner_assigned_to">
+        android:layout_below="@+id/spinner_assigned_to"
+        android:entries="@array/arrays_priority"
+        android:layout_marginTop="5dp">
 
     </Spinner>
 
 
-    <EditText
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/editText_create_task"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_below="@+id/spinner_priority"
-        android:hint="Create Goal
-        " />
+        android:layout_marginTop="5dp">
 
-    <EditText
-        android:id="@+id/editText_hour"
+        <EditText
+            android:id="@+id/editText_create_task_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Create Goal"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/editText_hour"
         android:layout_below="@+id/editText_create_task"
-        android:hint="Create Hour
-        " />
+        android:layout_marginTop="5dp">
 
+        <EditText
+            android:id="@+id/editText_hour_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Create Hour"/>
+
+    </android.support.design.widget.TextInputLayout>
 
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editText_hour"
-        android:weightSum="2">
+        android:weightSum="2"
+        android:layout_marginTop="15dp">
 
         <Button
             android:id="@+id/button_cancel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Cancel" />
+            android:text="Cancel"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:textColor="@color/white"
+            android:layout_marginRight="5dp"/>
 
         <Button
             android:id="@+id/button_create_goal"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Create" />
+            android:text="Create"
+            style="@style/Widget.AppCompat.Button.Colored"
+            android:textColor="@color/white"
+            android:layout_marginLeft="5dp"/>
 
     </LinearLayout>
 
 
 </RelativeLayout>
+

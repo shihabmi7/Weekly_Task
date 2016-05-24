@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,35 +8,56 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".LoginActivity">
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.bitmakers.weeklytask.TaskCreateActivity"
+    tools:showIn="@layout/activity_task_create2">
+
 
     <Spinner
         android:id="@+id/spinner_select_goal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText_project_name">
+        android:layout_alignParentTop="true"
+        android:entries="@array/arrays_goal">
 
     </Spinner>
 
 
-    <EditText
+    <android.support.design.widget.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/editText_create_task"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_below="@+id/spinner_select_goal"
-        android:hint="Create Task" />
+        android:layout_marginTop="5dp">
 
-    <EditText
-        android:id="@+id/editText_hour"
+        <EditText
+            android:id="@+id/editText_create_task_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Task Name"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:id="@+id/editText_hour"
         android:layout_below="@+id/editText_create_task"
-        android:hint="Create Hour" />
+        android:layout_marginTop="5dp">
+
+        <EditText
+            android:id="@+id/editText_hour_et"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Task Hours"/>
+
+    </android.support.design.widget.TextInputLayout>
+
 
 
     <SeekBar
         android:id="@+id/seekBar"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/editText_hour"
         android:padding="20dp" />
@@ -52,16 +74,19 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:text="Cancel" />
 
         <Button
-            android:id="@+id/button_create_goal"
+            android:id="@+id/button_create_project"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            style="@style/Widget.AppCompat.Button.Colored"
             android:text="Create" />
 
     </LinearLayout>
 
 
 </RelativeLayout>
+

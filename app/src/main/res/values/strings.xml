@@ -18,4 +18,34 @@
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <string-array name="arrays_goal">
+        <item>Select Goal</item>
+        <item>Goal #1</item>
+        <item>Goal #2</item>
+        <item>Goal #3</item>
+    </string-array>
+
+
+    <string-array name="arrays_assignee">
+        <item>Assigned To</item>
+        <item>Mahbub Hasan</item>
+        <item>Shihab Uddin</item>
+        <item>Mahbub Mukul</item>
+    </string-array>
+
+    <string-array name="arrays_priority">
+        <item>Select Priority</item>
+        <item>Top</item>
+        <item>Mid</item>
+        <item>Low</item>
+    </string-array>
+
+
+    <string name="title_activity_goal_create">Creat Goal</string>
+    <string name="title_activity_project_create">Create Project</string>
+    <string name="title_activity_task_create">Create Task</string>
+    <string name="title_activity_project">ProjectActivity</string>
+    <string name="title_activity_goal">GoalActivity</string>
 </resources>
